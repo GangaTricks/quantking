@@ -1,0 +1,757 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetting default styling and setting font-family */
+
+
+/* Set the base font size in body */
+/* Apply global font size */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fcfcff;
+	 font-size: 12px; /* 2% of the viewport width */
+}
+
+/* Force all elements to inherit font-size from the body, even if they have inline styles 
+p, h1, h2, h3, h4, h5, h6, span, div, a, button, input, #options {
+    font-size: inherit !important;
+} */
+
+#question {
+    padding: 10px;
+	margin-top: 30px;
+    margin-bottom: 05px;
+	  font-size: 18px;
+    
+    /* Typography */
+    text-align: justify; /* Center text alignment for balance */
+
+    /* New box-shadow to override the previous one */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px !important; 
+
+    /* Border effect */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Light border for structure */
+    position: relative; /* Required for pseudo-element effects */
+ user-select: text; /* Allow user to select the text */
+    cursor: pointer; /* Indicate that text is selectable */
+}
+
+
+/* Button-like hover effect for the question container */
+#question:hover {
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 32px;
+}
+
+/* Adding the "Question ID" on the left corner using ::before */
+#question::before {
+    content: "Question"; /* Replace '123' with dynamic question ID */
+	padding: 02px;
+    position: absolute;
+    top: -15px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    font-size: 15px; /* Size of the ID text */
+	background: lightgreen;
+    color: black; /* A subtle color for the ID text */
+    font-weight: bold;
+	border-radius: 05px;
+}
+
+/* Ensure images fit within the container */
+#question img {
+    max-width: 100%;  /* Restrict image to container width */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Block-level to ensure proper rendering */
+}
+
+#options {
+	 padding: 10px;
+	margin-top: 30px;
+    margin-bottom: 05px;
+	font-size: 18px;
+    
+    /* Typography */
+    text-align: justify; /* Center text alignment for balance */
+
+    /* New box-shadow to override the previous one */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px !important; 
+
+    /* Border effect */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Light border for structure */
+    position: relative; /* Required for pseudo-element effects */
+ user-select: text; /* Allow user to select the text */
+    cursor: pointer; /* Indicate that text is selectable */
+}
+/* Adding the "Question ID" on the left corner using ::before */
+#options::before {
+    content: "Options"; /* Replace '123' with dynamic question ID */
+	padding: 02px;
+    position: absolute;
+    top: -15px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    font-size: 15px; /* Size of the ID text */
+	background: lightgreen;
+    color: black; /* A subtle color for the ID text */
+    font-weight: bold;
+	border-radius: 05px;
+}
+/* Style for the "Select" button */
+.select-button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for the button */
+.select-button:hover {
+}
+
+.explanation-text {
+    line-height: 1.7; /* Enhanced readability */
+	font: Sans Serif;
+    font-size: 15px; /* Comfortable font size */
+    text-align: justify; /* Clean text alignment */
+	letter-spacing: 0.7px; 
+    /* Offsetting parent container's padding */
+    margin-left: -20px; /* Matches parent padding */
+    margin-right: -20px; /* Matches parent padding */
+	margin-bottom: -42px;
+    width: calc(100% + 40px); /* Expand to compensate for negative margins */
+	margin-top: 07px;
+    padding: 15px; /* Padding inside the box */
+    border-top: 3px solid #2980b9;
+    border-right: 2px solid #bdc3c7;
+    border-left: 2px solid #bdc3c7;
+    border-bottom: 5px solid #2980b9;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-sizing: border-box; /* Includes borders in the width/height calculation */
+}
+/* Ensure images fit within the container */
+.explanation-text img {
+    max-width: 100%; /* Restricts image to container width */
+    height: auto; /* Maintains image aspect ratio */
+    display: block;
+}
+
+/* Ensure tables fit within the container */
+.explanation-text table {
+    max-width: 100%; /* Restricts table to container width */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    display: block; /* Prevents table overflow */
+    word-wrap: break-word; /* Break long words for better fit */
+}
+
+/* Hide the "Download Solution PDF" button */
+.explanation-text .solpdf-download-link {
+    display: none; /* Hides the PDF download button */
+}
+
+/* Hide the "Share on Whatsapp" button */
+.explanation-text .resp-sharing-button--whatsapp {
+    display: none; /* Hides the Whatsapp share button */
+}
+
+
+
+.explanation-text::before {
+    content: 'Explanation/Concepts'; /* Custom heading */
+    display: block;
+	position: relative;
+	display: block;
+	width: 170px;
+	top: -30px; /* Distance from the top */
+    left: 05px; /* Distance from the left */
+    font-size: 15px; /* Larger heading size for distinction */
+    font-weight: bold; /* Bold for emphasis */
+	background: lightgreen;
+    color: black; /* Harmonize heading color */
+    letter-spacing: 0.5px; /* Subtle letter spacing for a polished look */
+	border-radius: 05px;
+	padding: 02px;
+}
+
+.explanation-text::after {
+	content: 'Powered by GangaTricks';
+    display: block;
+    font-size: 10px; /* Larger heading size for distinction */
+    font-weight: bold; /* Bold for emphasis */
+    color: #34495e; /* Harmonize heading color */
+    letter-spacing: 0.5px; /* Subtle letter spacing for a polished look */
+    border-top: 2px solid #3498db; /* Underline accent for the heading */
+    padding-top: 8px; /* Space under heading */
+}
+
+.explanation-text h6 {
+    font-size: 17px; /* Slightly smaller font for explanation */
+    color: #34495e; /* Consistent, sophisticated color */
+    margin-bottom: 12px; /* Space between explanation paragraphs */
+}
+
+.explanation-text p {
+    margin-bottom: 16px; /* Larger space between paragraphs for readability */
+}
+
+.explanation-text strong {
+    color: #2980b9; /* Highlight strong text with accent color */
+    font-weight: bold;
+}
+
+.explanation-text em {
+    font-style: italic;
+    color: #7f8c8d; /* Subtle grey color for emphasized text */
+}
+/* explanation css ends here this is last code  */
+
+.text-success-transparent {
+  color: rgba(0,160, 0, 1); /* Transparent green color */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-5px); }
+  20%, 80% { transform: translateX(5px); }
+  30%, 50%, 70% { transform: translateX(-5px); }
+  40%, 60% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.1s ease-in-out;
+}
+
+  label {
+      font-weight: bold;
+	  font-size: 18px;
+    }
+
+/* Additional CSS for the option border */
+.option-border {
+    position: relative; /* Make the container relative for absolute positioning */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3px;
+	margin-bottom: 15px;
+}
+
+/* Hide the default radio button */
+.form-check-input {
+    display: none;
+}
+
+/* Style the label to look like a clickable option */
+.form-check-label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+/* Add styles to label when hovering over it */
+.form-check-label:hover .option-border {
+    background-color: #f0f0f0;
+}
+
+/* Adjustments to form-check-label */
+.form-check-label:before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px; /* Adjust spacing between circle and text */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Change styles of label when radio button is checked */
+.form-check-input:checked + .form-check-label:before {
+    background-color: #007bff; /* Change color when checked */
+}
+
+
+  
+
+
+button.cool {
+    background: white; /* Button background */
+    font-size: 15px; /* Larger heading size */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 10px; /* Space below heading */
+    color: gray; /* Harmonized heading color */
+    letter-spacing: 0.5px; /* Subtle letter spacing */
+     /* Underline accent for the heading border-bottom: 2px solid #3498db; */
+    padding-bottom: 15px; /* Space under heading */
+	
+	width: 100%;
+	padding: 00px; /* More spacious padding for a luxurious feel */
+    border-right: 2px solid #bdc3c7; /* Subtle right border for balance */
+	border-left: 2px solid #bdc3c7; /* Subtle right border for balance */
+}
+
+button.cool::before {
+    content: '  '; /* Custom heading */
+    font-size: 10px; /* Larger heading size */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 10px; /* Space below heading */
+	margin-right: 10px; /* Space below heading */
+	margin-left: 20px; /* Space below heading */
+    color: #34495e; /* Harmonized heading color */
+    letter-spacing: 0.5px; /* Subtle letter spacing */
+    padding-bottom: 15px; /* Space under heading */
+}
+	
+	button.cool:hover {
+	display: none;
+	}
+	
+
+
+
+button {
+      padding: 05px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+	  background: #4169E1;
+	  color: white;
+      transition: background-color 0.3s ease;
+    }
+
+
+    button:hover {
+      background-color: white;
+      color: blue;
+    }
+
+    .btn-primary {
+      background-color: ;
+    }
+
+    .btn-success {
+      background-color: ;
+    }
+
+    .btn-primary:hover {
+      background-color: ;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn-container button {
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    .btn-warning {
+      padding: 04px;
+	  font-weight: bold;
+	  color: white;
+    }
+
+    input[type="number"] {
+      padding: 7px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 60px;
+    }
+
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed; /* Change position to fixed */
+  top: 0;
+  left: -250px; /* Move sidebar off-screen initially */
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  padding-top: 10px;
+  
+  transition: 0.5s;
+  z-index: 1009; /* Ensure the sidebar is above the content */
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: 0.1s;
+}
+.sidebar a:hover {
+  background-color: #ddd;
+}
+.container {
+  padding-left: 0; /* Remove padding from the container */
+  transition: 0.5s;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ;
+  padding: 10px;
+  z-index: 900; /* Ensure the navbar is above the sidebar */
+}
+	    /* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.headerbar {
+		background: orange;
+		color: #FFF;
+		line-height: 50px;
+		position: fixed;
+		top: 0;
+		left: 0px;
+		right: 0px;
+		height: 60px;
+		display: flex;
+		padding: 02px;
+		justify-content: space-between;
+		z-index: 900;
+		}
+
+
+@media only screen and (max-width: 600px) {
+ .navbot {
+			background: white;
+            line-height: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+			box-shadow: 0 -3px 5px -3px black;
+			border-radius: 20px 20px 0 0;
+            z-index: 5;
+            display: flex;
+            justify-content: space-around;
+            transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+		
+		 .navbot.hidden {
+            transform: translateY(90%); /* Move the navbar outside the viewport */
+        }
+
+               .navbot div {
+            display: flex;
+            gap: 02px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+        }
+}
+@media only screen and (min-width: 600px) {
+ .navbot {
+            line-height: 50px;
+            position: fixed;
+            top: -15px;
+            right: 40%;
+            width: 360px;
+            height: 90px;
+			
+			padding: 15px;
+			border-radius: 05px;
+          z-index: 901;
+		  display: flex;
+            transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+
+               .navbot div {
+				   
+            display: flex;
+            gap: 05px;
+        }
+
+}
+		
+		.exim {
+		position: fixed;
+		top: 70px;
+		height:60px;
+		width: 100%;
+		background: #4169E1;
+		color: white;
+		     z-index: 1000;
+		}
+	
+		
+		
+main {
+padding-top: 60px;
+padding-left: 05px;
+padding-right: 05px;
+padding-bottom: 200px;
+margin-bottom: 03px;
+}
+.btn-bookmark {
+position: absolute;
+right: 5%;
+font-size: 15px;
+border: 2px solid gray;
+margin-left: 30px;}
+.takemargin {
+margin-bottom: 10px;
+}
+.separator {
+	00px 02px 00px rgba(0, 0, 0, 0.3);
+}
+
+
+.toast {
+  visibility: hidden;
+  min-width: 200px;
+  background-color: none;
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  padding: 05px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 80px;
+  font-size: 12px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+    /* Hide the Google Translate top bar */
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-banner-frame {
+      display: none !important;
+  }
+
+  /* Prevent body from shifting due to the hidden Google Translate toolbar */
+  body {
+      top: 0px !important;
+  }
+
+  /* Hide Google Translate's "Powered by" logo and related elements */
+  .goog-logo-link {
+      display: none !important;
+  }
+
+  .goog-te-gadget {
+      display: none !important;
+  }
+  
+.back-page {
+	
+  margin-left: 10px !important;
+  height: 40px !important;
+  width: 40px !important;
+  padding: 05px !important;
+  border-radius: 25px !important;
+  box-shadow: white 0px 0px 0px 0px, white 0px 0px 10px 0px !important;
+  -webkit-filter: invert(38%) sepia(100%) saturate(4270%) hue-rotate(202deg) brightness(80%) contrast(90%) !important;
+  filter: invert(38%) sepia(100%) saturate(4270%) hue-rotate(202deg) brightness(80%) contrast(90%) !important;
+}
+
+
+  /*Pictorial and flashcard codes from here*/
+  
+  .flashcard {
+font-family: Verdana;
+    background-color: #fff;
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative; /* Ensure relative positioning for absolute positioning of save button */
+}
+.question {
+    width: 90%; /* Question text occupies 90% of flashcard area */
+    word-wrap: break-word; /* Breaks long words to fit within the container */
+}
+
+.flashcard .save-toggle-btn {
+    position: absolute;
+    border: 2px solid indigo;
+	font-size: 10px;
+    top: 5px;
+    right: 5px;
+	padding: 00px;
+	background: gold;
+	font-weight: bold;
+    z-index: 1; /* Ensure save button is above flashcard content */
+}
+
+.flashcard-answer {
+    display: none;
+}
+
+.flashcard.saved {
+    background-color: lightgreen;
+}
+
+
+/* Style for Viewer.js background */
+.viewer .viewer-container {
+  background-color: black; /* Set viewer background to black */
+}
+
+/* Enhanced gallery styling *//* Responsive gallery container with CSS grid */
+#gallery {
+  display: block;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Grid adapts to screen size */
+  gap: 20px; /* Spacing between grid items */
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  max-width: 520px; /* Limit max width on large screens */
+  margin: 0 auto; /* Center gallery */
+}
+
+/* Individual image styling */
+#gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  
+   max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect for desktop */
+#gallery img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Image container with description */
+.image-container {
+  display: flex;
+  flex-direction: column; /* Align image and description vertically */
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 1px 1px black; /* Soft shadow */
+   padding: 50px;
+  margin: 0 auto; /* Center the content */
+  max-width: 100%; /* Ensure full width responsiveness */
+  width: 100%;
+}
+
+/* Description styling */
+.image-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+  word-wrap: break-word; /* Prevent text overflow */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.image-container:hover .image-description {
+  color: #333; /* Darker text color on hover */
+}
+
+/* Mobile-first design approach */
+@media (max-width: 768px) {
+  #gallery {
+    gap: 15px; /* Tighter spacing for tablets */
+    padding: 15px;
+  }
+
+  #gallery img {
+    border-radius: 8px;
+  }
+
+  .image-description {
+    font-size: 13px; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery {
+    gap: 10px; /* More compact for mobile */
+    padding: 10px;
+  }
+
+  #gallery img {
+    border-radius: 6px;
+  }
+
+  .image-description {
+    font-size: 12px; /* Smaller text for mobile */
+  }
+}
+
+/* Advanced touch interaction for mobile */
+@media (hover: none) and (pointer: coarse) {
+  #gallery img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow on mobile */
+  }
+
+  #gallery img:active {
+    transform: scale(1.05); /* Slightly reduced scaling on touch */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Shadow change on tap */
+  }
+}
+
+/* Animation for image appearance */
+#gallery img {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards; /* Smooth fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9); /* Scale from smaller size */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Normal size */
+  }
+}
+
+.pdf-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin: 10px;
+}
+
+.pdf-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+  /*Pictorial and flashcard codes ends here */
+
+
+
